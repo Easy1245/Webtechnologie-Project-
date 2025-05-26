@@ -1,4 +1,3 @@
-# Webtechnologie-Project-
+# Webtechnologie-Project
 Examen project
-test
-JOW
+WE HEBBEN NIKS 
