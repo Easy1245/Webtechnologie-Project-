@@ -1,0 +1,13 @@
+localhost, 127.0.0.1 {
+    root * /mnt/c/group_project
+  
+    #php_fastcgi 127.0.0.1:9001
+    php_fastcgi unix//run/php/php8.3-fpm.sock
+
+    
+
+    handle_errors {
+        respond "{err.status_code} {err.status_text}"
+    }
+
+}
