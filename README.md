@@ -1,68 +1,46 @@
 # Opdracht UDP_TCP
 
-Dit is een voorbeeldproject waarin we werken met UDP- en TCP-communicatie in Python (of jouw taal). Dit project bevat basisimplementaties van netwerkclients en servers.
-
+Dit is ons project waarin we werken met verschillende programmeer talen. Zoals php, HTML en java.
 ## Beschrijving
 
-Dit project demonstreert de basisprincipes van netwerkprogrammering met UDP en TCP. Het bevat eenvoudige scripts voor het opzetten van servers en clients die met elkaar communiceren via deze protocollen.
+Dit project bevat een local host webserver die het weer weergeeft ;) 
 
 ## Installatie
-
-Zorg dat je Python 3.x (of jouw gebruikte taal) hebt geïnstalleerd.
+```bash
+sudo apt install php8.3-fpm
+sudo apt install caddy
+sudo apt install postgresql postgresql-contrib php-pgsql
+sudo apt install net-tools
+sudo apt update
+sudo apt install apache2 php php-pgsql 
+```
 
 Clone de repository:
 
 ```bash
-git clone https://github.com/feefranssen/Opdracht_UDP_TCP.git
-cd Opdracht_UDP_TCP
-```
-
-(Voeg eventueel dependency-installatie toe als nodig:)
-
-```bash
-pip install -r requirements.txt
+git clone https://github.com/Easy1245/Webtechnologie-Project-.git
 ```
 
 ## Gebruik
 
-### UDP
-
-Start eerst de UDP-server:
-
+Om de caddy file werkend te krijgen :
 ```bash
-python udp_server.py
-```
+sudo systemctl start php8.3-fpm
 
-Start dan de UDP-client in een andere terminal:
+sudo lsof -i :80
 
-```bash
-python udp_client.py
-```
+sudo systemctl stop apache2 
 
-### TCP
+sudo systemctl start caddy
 
-Start eerst de TCP-server:
+sudo systemctl restart caddy
 
-```bash
-python tcp_server.py
-```
+sudo systemctl status caddy
 
-Start dan de TCP-client in een andere terminal:
+sudo systemctl stop caddy
 
-```bash
-python tcp_client.py
-```
+sudo caddy run --config /mnt/c/group_project/caddyfile --adapter caddyfile
 
-## Structuur
-
-```
-Opdracht_UDP_TCP/
-├── udp_server.py
-├── udp_client.py
-├── tcp_server.py
-├── tcp_client.py
-├── README.md
-└── requirements.txt
 ```
 
 ## Licentie
