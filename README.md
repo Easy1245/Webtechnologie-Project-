@@ -42,6 +42,17 @@ sudo systemctl stop caddy
 sudo caddy run --config /mnt/c/group_project/caddyfile --adapter caddyfile
 
 ```
+## Databas
+
+Om de database te bekijken
+```bash
+psql -h localhost -p 5432 -U admin -d webtechhelp
+
+\dt
+
+SELECT * FROM weather_data; 
+
+```
 
 ## Licentie
 
