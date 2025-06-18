@@ -1,44 +1,73 @@
-# WebTechHelp Project
+# Opdracht UDP_TCP
 
-## Inhoud
+Dit is een voorbeeldproject waarin we werken met UDP- en TCP-communicatie in Python (of jouw taal). Dit project bevat basisimplementaties van netwerkclients en servers.
 
-- [Projectbeschrijving](#projectbeschrijving)
-- [Technologieën](#technologieën)
-- [Installatie](#installatie)
-- [Gebruik](#gebruik)
-- [API Endpoints](#api-endpoints)
-- [Database](#database)
-- [Veiligheid](#veiligheid)
-- [Team en versiebeheer](#team-en-versiebeheer)
-- [Externe apparaten](#externe-apparaten)
-- [Presentatie en documentatie](#presentatie-en-documentatie)
+## Beschrijving
 
----
-
-## Projectbeschrijving
-
-Dit project is een webapplicatie die weerdata verzamelt en beheert via een RESTful API.  
-Gebruikers kunnen weerdata toevoegen, wijzigen, opvragen en verwijderen.  
-Daarnaast kan een extern embedded device via HTTP communiceren met de server.
-
----
-
-## Technologieën
-
-- **Webserver:** Apache/Nginx (HTTP server)
-- **Backend:** PHP 8.x (REST API)
-- **Frontend:** HTML, CSS, JavaScript
-- **Database:** PostgreSQL
-- **Versiebeheer:** Git & GitHub
-- **Authenticatie:** SSH key based toegang voor serverbeheer
-
----
+Dit project demonstreert de basisprincipes van netwerkprogrammering met UDP en TCP. Het bevat eenvoudige scripts voor het opzetten van servers en clients die met elkaar communiceren via deze protocollen.
 
 ## Installatie
 
-1. **Clone de repository:**
+Zorg dat je Python 3.x (of jouw gebruikte taal) hebt geïnstalleerd.
 
-   ```bash
-   git clone https://github.com/jouwgebruikersnaam/webtechhelp.git
-   cd webtechhelp
+Clone de repository:
+
+```bash
+git clone https://github.com/feefranssen/Opdracht_UDP_TCP.git
+cd Opdracht_UDP_TCP
+```
+
+(Voeg eventueel dependency-installatie toe als nodig:)
+
+```bash
+pip install -r requirements.txt
+```
+
+## Gebruik
+
+### UDP
+
+Start eerst de UDP-server:
+
+```bash
+python udp_server.py
+```
+
+Start dan de UDP-client in een andere terminal:
+
+```bash
+python udp_client.py
+```
+
+### TCP
+
+Start eerst de TCP-server:
+
+```bash
+python tcp_server.py
+```
+
+Start dan de TCP-client in een andere terminal:
+
+```bash
+python tcp_client.py
+```
+
+## Structuur
+
+```
+Opdracht_UDP_TCP/
+├── udp_server.py
+├── udp_client.py
+├── tcp_server.py
+├── tcp_client.py
+├── README.md
+└── requirements.txt
+```
+
+## Licentie
+
+Dit project valt onder de MIT-licentie. Zie `LICENSE` voor details.
+
+
 
